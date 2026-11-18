@@ -1,0 +1,22 @@
+<h1>Cadastro do Cliente</h1>
+
+<p>Nome:</p>
+<input id="nome" placeholder="Digite seu nome">
+
+<p>Telefone:</p>
+<input id="telefone" placeholder="(19) 99999-9999">
+
+<p>E-mail:</p>
+<input id="email" placeholder="exemplo@email.com">
+
+<br><br>
+<button onclick="cadastrar()">Cadastrar</button>
+
+<p id="mensagem"></p>
+
+<script>
+function cadastrar() {
+  let nome = document.getElementById("nome").value;
+  document.getElementById("mensagem").innerText = "Obrigada, " + nome + "! Cadastro feito com sucesso!";
+}
+</script>
