@@ -1,22 +1,54 @@
-<h1>Cadastro do Cliente</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consultora Dani - Cadastro do Cliente</title>
+<style>
+body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #ff6fae, #a855f7); margin: 0; padding: 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+.card { background: white; padding: 30px; border-radius: 20px; width: 100%; max-width: 380px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); text-align: center; }
+.card h1 { color: #d63384; font-size: 24px; margin-bottom: 5px; }
+.card p { color: #666; font-size: 14px; margin-top: 0; }
+label { display: block; text-align: left; font-weight: bold; margin-top: 15px; color: #333; font-size: 14px; }
+input { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ddd; border-radius: 10px; font-size: 15px; box-sizing: border-box; }
+button { width: 100%; padding: 14px; background: #d63384; color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: bold; margin-top: 20px; cursor: pointer; }
+button:hover { background: #b81f6d; }
+#msg { margin-top: 15px; font-weight: bold; color: #22c55e; }
+.footer { margin-top: 15px; font-size: 12px; color: #999; }
+</style>
+</head>
+<body>
+<div class="card">
+<h1>💖 Consultora Dani</h1>
+<p>Empréstimos e Crédito Consignado<br>Cadastre-se e receba atendimento!</p>
 
-<p>Nome:</p>
-<input id="nome" placeholder="Digite seu nome">
+<label>Nome:</label>
+<input type="text" id="nome" placeholder="Digite seu nome">
 
-<p>Telefone:</p>
-<input id="telefone" placeholder="(19) 99999-9999">
+<label>Telefone / WhatsApp:</label>
+<input type="text" id="telefone" placeholder="(19) 99999-9999">
 
-<p>E-mail:</p>
-<input id="email" placeholder="exemplo@email.com">
+<label>E-mail:</label>
+<input type="email" id="email" placeholder="exemplo@email.com">
 
-<br><br>
-<button onclick="cadastrar()">Cadastrar</button>
+<button onclick="cadastrar()">Quero ser atendida! ✨</button>
+<div id="msg"></div>
 
-<p id="mensagem"></p>
+<div class="footer">Consultora Dani - Atendimento rápido e seguro</div>
+</div>
 
 <script>
 function cadastrar() {
-  let nome = document.getElementById("nome").value;
-  document.getElementById("mensagem").innerText = "Obrigada, " + nome + "! Cadastro feito com sucesso!";
+  var nome = document.getElementById("nome").value;
+  var msg = document.getElementById("msg");
+  if (nome === "") {
+    msg.innerHTML = "Por favor, digite seu nome!";
+    msg.style.color = "red";
+    return;
+  }
+  msg.style.color = "#22c55e";
+  msg.innerHTML = "Obrigada, " + nome + "! Cadastro feito com sucesso! 💖 Já já te chamo no WhatsApp!";
 }
 </script>
+</body>
+</html>
