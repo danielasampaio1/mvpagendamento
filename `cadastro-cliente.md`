@@ -1,0 +1,4 @@
+# Cadastro de Cliente
+Campos: nome, telefone.
+Validação: nome e telefone são obrigatórios. Se vazio, mostrar mensagem de erro.
+Acessibilidade: navegação por Tab, foco visível.
